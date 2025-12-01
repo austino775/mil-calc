@@ -63,10 +63,30 @@
             line-height: 1.5;
         }
 
-        .legal {
-            margin-top: 15px;
-            font-size: 0.75rem;
-            color: #aaa;
+        .legal-section {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        .legal-section h2 {
+            font-size: 1.4rem;
+            color: #e8e8e8;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .legal-section p, .legal-section li {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .legal-section ul {
+            list-style: decimal;
+            padding-left: 20px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -81,11 +101,41 @@
 
     <a class="support-btn" href="mailto:support@mil-calc.com">Contact Support</a>
 
+    <section class="legal-section">
+        <h2>Privacy Policy</h2>
+        <p>This application does not collect, store, transmit, or share any personal data. No analytics, tracking systems, or third-party data services are used. All settings remain on the user's device and never leave it.</p>
+
+        <h2>Terms of Service</h2>
+        <p>This application is provided for lawful recreational, educational, and sporting use only. All calculations and information are approximations and should not be relied upon as a sole source of truth. Users are solely responsible for ensuring safe, legal, and appropriate use of this app.</p>
+        <p>By using this app, the user agrees that the developer is not responsible for any damages, injuries, or legal consequences arising from misuse, misinterpretation of data, or unsafe behavior.</p>
+
+        <h2>Firearm Safety Rules</h2>
+        <p>This app does not replace professional firearm instruction. Users must always follow the universal rules of firearm safety:</p>
+        <ul>
+            <li>Treat every firearm as if it is loaded.</li>
+            <li>Never point a firearm at anything you are not willing to destroy.</li>
+            <li>Keep your finger off the trigger until your sights are on target and you are ready to fire.</li>
+            <li>Be sure of your target, your foreground, and your background.</li>
+            <li>Know how your firearm operates and maintain it properly.</li>
+            <li>Store firearms and ammunition securely when not in use.</li>
+        </ul>
+        <p>Failure to follow these rules can result in serious injury or death. Always obtain proper in-person firearms training from a certified instructor.</p>
+
+        <h2>Legal Compliance Notice</h2>
+        <p>Users are responsible for complying with all applicable local, state, and federal laws regarding firearms, ammunition, and ballistic equipment. This application must not be used for any unlawful purpose or in any way that could assist in evading the law.</p>
+
+        <h2>Accuracy Disclaimer</h2>
+        <p>All calculations, ranging estimates, and ballistic information in this app are approximations. Actual real-world performance may vary due to environmental conditions, equipment differences, and human factors. Always confirm data through safe, controlled, real-world procedures.</p>
+
+        <h2>Open Source Licenses</h2>
+        <p>If this application uses open-source libraries, their licenses will be listed here.</p>
+
+        <h2>Contact Information</h2>
+        <p>For questions, support, or data-related requests, contact the developer at: <a href="mailto:support@mil-calc.com" style="color:#ccc;">support@mil-calc.com</a></p>
+    </section>
+
     <footer>
         © 2025 Mil-Calc. All rights reserved. For educational and recreational use only.
-        <div class="legal">
-            Mil-Calc provides estimations for distance and milling calculations. Accuracy is not guaranteed and results should be verified independently. The app is provided "as-is" without warranty of any kind. Users assume all risk associated with the use of this application. Personal data is handled in accordance with our <a href="privacy.html" style="color:#aaa;">Privacy Policy</a>.
-        </div>
     </footer>
 
 </body>
