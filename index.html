@@ -1,305 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Mil-Calc — Distance Milling Calculator for iPhone</title>
-<meta name="description" content="Mil-Calc — Distance Milling Calculator for iPhone. Quick, tactical ranging and mill conversion."/>
-<style>
-:root{
-  --bg:#0f1410;
-  --panel:#131717;
-  --muted:#bfc8bf;
-  --accent:#7ea06a;
-  --accent-2:#556b47;
-  --glass: rgba(255,255,255,0.03);
-  --card: #0f1710;
-  --radius:14px;
-  --max-width:980px;
-  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", monospace;
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg,#0c0f0c 0%, #0b0e0b 60%);
-  color:var(--muted);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.45;
-  display:flex;
-  justify-content:center;
-  padding:32px 18px;
-}
-.container{
-  width:100%;
-  max-width:var(--max-width);
-  margin:0 auto;
-}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mil-Calc</title>
 
-/* HERO */
-.hero{
-  display:grid;
-  grid-template-columns: 120px 1fr;
-  gap:20px;
-  align-items:center;
-  background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
-  border-radius:var(--radius);
-  padding:22px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6), inset 0 1px rgba(255,255,255,0.02);
-  border:1px solid rgba(255,255,255,0.02);
-}
-.logo-wrap{
-  width:110px;
-  height:110px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(180deg,var(--accent-2), #606d4f);
-  border-radius:22px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-  flex-shrink:0;
-  overflow:hidden;
-}
-.logo-wrap img{width:92%; height:auto; display:block; filter:contrast(.95) saturate(.9)}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f1112;
+            color: #e5e5e5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
 
-/* Title block */
-.title h1{
-  margin:0 0 6px 0;
-  color:#e9f0e6;
-  font-size:1.6rem;
-  letter-spacing:0.6px;
-}
-.title p.lead{
-  margin:0;
-  color:var(--muted);
-  opacity:0.95;
-  font-size:1.02rem;
-}
+        .hero {
+            padding: 60px 20px;
+        }
 
-/* CONTENT GRID */
-.grid{
-  display:grid;
-  grid-template-columns: 1fr 360px;
-  gap:18px;
-  margin-top:18px;
-}
+        .logo {
+            width: 180px;
+            height: auto;
+            margin-bottom: 25px;
+            border-radius: 22px;
+        }
 
-/* MAIN CARD */
-.card{
-  background: linear-gradient(180deg, rgba(255,255,255,0.012), rgba(0,0,0,0.04));
-  padding:18px;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,0.02);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-}
+        h1 {
+            font-size: 3rem;
+            color: #e8e8e8;
+            margin-bottom: 10px;
+        }
 
-/* How it works */
-.steps{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-.step{
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
-}
-.step .num{
-  background:var(--glass);
-  min-width:44px;
-  height:44px;
-  border-radius:8px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:700;
-  color:var(--muted);
-  font-family:var(--mono);
-  border:1px solid rgba(255,255,255,0.03);
-}
-.step .desc{font-size:0.98rem; color:var(--muted)}
+        .tagline {
+            font-size: 1.2rem;
+            color: #c4c4c4;
+            margin-bottom: 40px;
+        }
 
-/* Screenshots / CTA */
-.side{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-.preview{
-  background:linear-gradient(180deg,#0b100b, #0f1410);
-  border-radius:10px;
-  padding:12px;
-  text-align:center;
-  border:1px solid rgba(255,255,255,0.02);
-}
-.preview img{max-width:100%; border-radius:8px; display:block; margin:0 auto; box-shadow:0 10px 30px rgba(0,0,0,0.6)}
-.cta{
-  display:flex;
-  gap:8px;
-  margin-top:8px;
-}
-.btn{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 14px;
-  border-radius:10px;
-  text-decoration:none;
-  color:#07140b;
-  font-weight:700;
-  background:linear-gradient(180deg,#b4d59c,#7ea06a);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-  border:1px solid rgba(255,255,255,0.06);
-}
-.btn.secondary{
-  background:transparent;
-  color:var(--muted);
-  border:1px solid rgba(255,255,255,0.04);
-  font-weight:600;
-}
+        .support-btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+            margin-top: 40px;
+        }
 
-/* Feature band */
-.features{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-top:16px;
-}
-.feature{
-  background:var(--glass);
-  padding:12px;
-  border-radius:10px;
-  border:1px solid rgba(255,255,255,0.02);
-  color:var(--muted);
-  font-size:0.95rem;
-}
+        .support-btn:hover {
+            background-color: #1558b0;
+        }
 
-/* Footer / legal */
-footer.sitefoot{
-  margin-top:18px;
-  color:#98a493;
-  font-size:0.85rem;
-  text-align:center;
-  opacity:0.95;
-}
-
-/* small screens */
-@media (max-width:880px){
-  .grid{grid-template-columns:1fr; }
-  .hero{grid-template-columns:92px 1fr}
-  .logo-wrap{width:92px;height:92px;border-radius:16px}
-  .features{grid-template-columns:1fr 1fr}
-}
-@media (max-width:520px){
-  body{padding:18px}
-  .hero{grid-template-columns:72px 1fr; padding:12px}
-  .logo-wrap{width:72px;height:72px}
-  .title h1{font-size:1.2rem}
-  .title p.lead{font-size:0.95rem}
-  .features{grid-template-columns:1fr}
-}
-</style>
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            color: #888;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container">
-    <header class="hero" role="banner">
-      <div class="logo-wrap" aria-hidden="true">
-        <img src="logo.png" alt="Mil-Calc logo">
-      </div>
-      <div class="title">
-        <h1>Mil‑Calc</h1>
-        <p class="lead">Distance Milling Calculator for iPhone</p>
-        <p style="margin-top:10px;color:#aebba6;font-size:0.9rem">
-          No more slide‑rules. Fast, tactical ranging and mill conversion — built for the field.
-        </p>
-      </div>
-    </header>
 
-    <main class="grid" role="main">
-      <section class="card">
-        <h2 style="margin-top:0;color:#e6efe3">How it works</h2>
-        <div class="steps">
-          <div class="step">
-            <div class="num">1</div>
-            <div class="desc"><strong>Measure the target:</strong> Use your reticle or reference target size in inches/centimeters.</div>
-          </div>
-          <div class="step">
-            <div class="num">2</div>
-            <div class="desc"><strong>Enter size & mils:</strong> Input the target size and mil reading — Mil‑Calc calculates the range instantly.</div>
-          </div>
-          <div class="step">
-            <div class="num">3</div>
-            <div class="desc"><strong>Apply corrections:</strong> Add target height, unit choice (yards/meters), and the app shows holdovers and conversions.</div>
-          </div>
-        </div>
+    <section class="hero">
+        <img src="logo.png" alt="Mil-Calc Logo" class="logo" />
+        <h1>Mil-Calc</h1>
+        <p class="tagline">Distance Milling Calculator for iPhone</p>
+    </section>
 
-        <div class="features" style="margin-top:18px;">
-          <div class="feature"><strong>Fast</strong><div style="font-size:0.9rem;margin-top:6px">Instant calculations, low battery usage.</div></div>
-          <div class="feature"><strong>Accurate</strong><div style="font-size:0.9rem;margin-top:6px">MIL↔MOA conversions, ranging formulas you can trust.</div></div>
-          <div class="feature"><strong>Portable</strong><div style="font-size:0.9rem;margin-top:6px">Designed for iPhone; works offline.</div></div>
-        </div>
+    <a class="support-btn" href="mailto:support@mil-calc.com">SUPPORT</a>
 
-        <h3 style="color:#d9e6cf;margin-top:18px">Step-by-step directions</h3>
-        <ol style="padding-left:18px;color:var(--muted)">
-          <li style="margin-bottom:8px"><strong>Open Mil‑Calc</strong> — select either MIL or MOA mode from the main menu.</li>
-          <li style="margin-bottom:8px"><strong>Choose units</strong> — pick inches/centimeters and yards/meters for output.</li>
-          <li style="margin-bottom:8px"><strong>Enter target size</strong> — type the known size (e.g., 18 in for a target) and the measured mils.</li>
-          <li style="margin-bottom:8px"><strong>Read range</strong> — the app displays distance and suggested holdover conversions.</li>
-          <li style="margin-bottom:8px"><strong>Save or share</strong> — export results, copy to clipboard, or email support if you need help.</li>
-        </ol>
-
-        <p style="margin-top:12px;color:#aebba6">Placeholder screenshots are shown on the right. Replace them with app screenshots for better conversion.</p>
-      </section>
-
-      <aside class="side">
-        <div class="preview card" aria-label="App preview">
-          <img src="screenshot-1.png" alt="Mil-Calc app screenshot placeholder">
-          <div style="margin-top:10px;color:var(--muted);font-size:0.95rem">Preview — replace with real screenshot</div>
-        </div>
-
-        <div class="card" style="padding:12px">
-          <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
-            <div>
-              <div style="font-size:0.95rem;color:#eaf0e6;font-weight:700">Get the app</div>
-              <div style="font-size:0.87rem;color:#aebba6">Download on the App Store (coming soon)</div>
-            </div>
-          </div>
-
-          <div class="cta" style="margin-top:12px">
-            <a class="btn" href="#" onclick="alert('Download link placeholder');return false;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="2" width="12" height="20" rx="2" stroke="rgba(0,0,0,0.12)" stroke-width="1.5" fill="white"/></svg>
-              Download
-            </a>
-            <a class="btn secondary" href="mailto:support@mil-calc.com">Contact Support</a>
-          </div>
-
-          <div style="margin-top:12px;font-size:0.9rem;color:var(--muted)">
-            <strong>Version:</strong> 1.0 • <strong>Platform:</strong> iPhone
-          </div>
-        </div>
-
-        <div class="card" style="padding:12px">
-          <div style="font-size:0.95rem;font-weight:700;color:#eaf0e6">Quick tips</div>
-          <ul style="margin:8px 0 0 18px;color:var(--muted);font-size:0.95rem">
-            <li>Use a steady rest for precise mil readings.</li>
-            <li>Confirm target size before inputting values.</li>
-            <li>Switch to metric for meters & centimeters.</li>
-          </ul>
-        </div>
-      </aside>
-    </main>
-
-    <footer class="sitefoot">
-      <div style="max-width:900px;margin:12px auto 0 auto; color:#98a493">
-        <div style="margin-bottom:6px">&copy; 2025 Mil‑Calc</div>
-        <div style="font-size:0.88rem; margin-bottom:6px; color:#a7b6a3">
-          <strong>Disclaimer:</strong> Mil‑Calc is provided for informational and recreational purposes only. Always confirm range and hold before any live firing. The developer is not responsible for misuse, injury, or property damage. Use at your own risk.
-        </div>
-        <div style="font-size:0.82rem;color:#9aa893">Contact: <a href="mailto:support@mil-calc.com">support@mil-calc.com</a></div>
-      </div>
+    <footer>
+        © 2025 Mil-Calc. All rights reserved. For educational and recreational use only.
     </footer>
-  </div>
+
 </body>
 </html>
