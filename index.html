@@ -7,17 +7,17 @@
 
 <style>
 :root {
-    --bg-dark: #0f1112;
-    --bg-card: #1b1e20;
-    --accent: #4CAF50;
-    --text-main: #e5e5e5;
-    --text-muted: #b5b5b5;
+    --bg-base: #4B5320;              /* Army Green (app icon) */
+    --bg-card: rgba(0, 0, 0, 0.20);  /* Soft overlay, not black */
+    --accent: #7ED957;               /* Muted tactical green */
+    --text-main: #f0f0f0;
+    --text-muted: #d0d0d0;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background: var(--bg-dark);
+    background: var(--bg-base);
     color: var(--text-main);
     font-family: Arial, sans-serif;
     text-align: center;
@@ -32,7 +32,7 @@ section {
     max-width: 900px;
     margin: 30px auto;
     padding: 40px 25px;
-    border-radius: 14px;
+    border-radius: 16px;
 }
 
 .logo {
@@ -44,6 +44,10 @@ section {
 h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 15px;
 }
 
 .tagline {
@@ -68,7 +72,7 @@ p {
     display: inline-block;
     padding: 14px 30px;
     background: var(--accent);
-    color: white;
+    color: #1a1a1a;
     text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
@@ -76,7 +80,7 @@ p {
 }
 
 .btn:hover {
-    background: #3e8e41;
+    filter: brightness(0.9);
 }
 
 .steps {
@@ -94,8 +98,8 @@ details {
     max-width: 900px;
     margin: 40px auto;
     background: var(--bg-card);
-    border-radius: 14px;
-    padding: 20px;
+    border-radius: 16px;
+    padding: 25px;
 }
 
 summary {
@@ -103,12 +107,17 @@ summary {
     font-weight: bold;
     cursor: pointer;
     color: var(--accent);
+    margin-bottom: 10px;
+}
+
+details h3 {
+    margin-top: 20px;
 }
 
 footer {
     margin: 50px 0 20px;
     font-size: 0.85rem;
-    color: #777;
+    color: #c0c0c0;
 }
 </style>
 </head>
@@ -141,10 +150,10 @@ footer {
         Milling is a fundamental shooting skill and a reliable backup when electronics or rangefinders fail.
     </p>
     <p>
-        It also reinforces ballistic understanding — and honestly, it’s kind of fun.
+        It reinforces ballistic understanding — and honestly, it’s kind of fun.
     </p>
     <p>
-        Mil-Calc makes milling fast, intuitive, and practical without taking the skill away from the shooter.
+        Mil-Calc keeps the skill intact while removing friction.
     </p>
 </section>
 
@@ -156,7 +165,9 @@ footer {
         <li>Enter both values into the app.</li>
         <li>Instantly receive the calculated distance in yards or meters.</li>
     </ol>
-    <p><strong>Accuracy matters:</strong> milling relies on knowing the target’s real-world size as precisely as possible.</p>
+    <p>
+        <strong>Accuracy matters:</strong> milling depends on knowing the target’s real-world size as precisely as possible.
+    </p>
 </section>
 
 <details>
