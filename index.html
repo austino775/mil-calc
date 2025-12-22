@@ -1,142 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mil-Calc</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mil-Calc</title>
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #0f1112;
-            color: #e5e5e5;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
+<style>
+:root {
+    --bg-dark: #0f1112;
+    --bg-card: #1b1e20;
+    --accent: #4CAF50;
+    --text-main: #e5e5e5;
+    --text-muted: #b5b5b5;
+}
 
-        .hero {
-            padding: 60px 20px;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-dark);
+    color: var(--text-main);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
 
-        .logo {
-            width: 180px;
-            height: auto;
-            margin-bottom: 25px;
-            border-radius: 22px;
-        }
+section {
+    padding: 60px 20px;
+}
 
-        h1 {
-            font-size: 3rem;
-            color: #e8e8e8;
-            margin-bottom: 10px;
-        }
+.card {
+    background: var(--bg-card);
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px 25px;
+    border-radius: 14px;
+}
 
-        .tagline {
-            font-size: 1.2rem;
-            color: #c4c4c4;
-            margin-bottom: 40px;
-        }
+.logo {
+    width: 180px;
+    border-radius: 22px;
+    margin-bottom: 20px;
+}
 
-        .support-btn {
-            display: inline-block;
-            padding: 14px 30px;
-            background-color: #4CAF50; /* Green matching app icon */
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: background-color 0.3s;
-            margin-top: 40px;
-        }
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
 
-        .support-btn:hover {
-            background-color: #3e8e41;
-        }
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
 
-        footer {
-            margin-top: 60px;
-            padding: 20px;
-            color: #888;
-            font-size: 0.85rem;
-            line-height: 1.5;
-        }
+.subtitle {
+    color: var(--accent);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
 
-        .legal-section {
-            max-width: 800px;
-            margin: 40px auto;
-            text-align: left;
-            padding: 0 20px;
-        }
+p {
+    max-width: 750px;
+    margin: 15px auto;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
 
-        .legal-section h2 {
-            font-size: 1.4rem;
-            color: #e8e8e8;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 30px;
+}
 
-        .legal-section p, .legal-section li {
-            font-size: 0.9rem;
-            color: #ccc;
-            margin-bottom: 10px;
-        }
+.btn:hover {
+    background: #3e8e41;
+}
 
-        .legal-section ul {
-            list-style: decimal;
-            padding-left: 20px;
-            margin-bottom: 10px;
-        }
-    </style>
+.steps {
+    text-align: left;
+    max-width: 700px;
+    margin: auto;
+}
+
+.steps li {
+    margin-bottom: 12px;
+    color: var(--text-muted);
+}
+
+details {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--bg-card);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--accent);
+}
+
+footer {
+    margin: 50px 0 20px;
+    font-size: 0.85rem;
+    color: #777;
+}
+</style>
 </head>
 
 <body>
 
-    <section class="hero">
-        <img src="logo.png" alt="Mil-Calc Logo" class="logo" />
-        <h1>Mil-Calc</h1>
-        <p class="tagline">Distance Milling Calculator for iPhone</p>
-    </section>
+<section>
+    <img src="logo.png" class="logo" alt="Mil-Calc Logo" />
+    <h1>Mil-Calc</h1>
+    <p class="subtitle">No more slide rules.</p>
+    <p class="tagline">Distance Milling Calculator for iPhone</p>
+    <a class="btn" href="mailto:support@mil-calc.com">Contact Support</a>
+</section>
 
-    <a class="support-btn" href="mailto:support@mil-calc.com">Contact Support</a>
+<section class="card">
+    <h2>What Is Mil-Calc?</h2>
+    <p>
+        Mil-Calc is a fast, modern distance milling calculator designed for shooters who want
+        accurate ranging without outdated tools, cluttered charts, or mental math.
+    </p>
+    <p>
+        It replaces traditional slide rules with a clean, readable interface built for real-world use —
+        whether you're at the range, hunting, or practicing fundamentals.
+    </p>
+</section>
 
-    <section class="legal-section">
-        <h2>Privacy Policy</h2>
-        <p>This application does not collect, store, transmit, or share any personal data. No analytics, tracking systems, or third-party data services are used. All settings remain on the user's device and never leave it.</p>
+<section class="card">
+    <h2>Why Milling Still Matters</h2>
+    <p>
+        Milling is a fundamental shooting skill and a reliable backup when electronics or rangefinders fail.
+    </p>
+    <p>
+        It also reinforces ballistic understanding — and honestly, it’s kind of fun.
+    </p>
+    <p>
+        Mil-Calc makes milling fast, intuitive, and practical without taking the skill away from the shooter.
+    </p>
+</section>
 
-        <h2>Terms of Service</h2>
-        <p>This application is provided for lawful recreational, educational, and sporting use only. All calculations and information are approximations and should not be relied upon as a sole source of truth. Users are solely responsible for ensuring safe, legal, and appropriate use of this app.</p>
-        <p>By using this app, the user agrees that the developer is not responsible for any damages, injuries, or legal consequences arising from misuse, misinterpretation of data, or unsafe behavior.</p>
+<section class="card">
+    <h2>How to Use Mil-Calc</h2>
+    <ol class="steps">
+        <li>Measure the target’s actual size accurately (height or width).</li>
+        <li>Observe the target through your optic and read the MIL or MOA measurement.</li>
+        <li>Enter both values into the app.</li>
+        <li>Instantly receive the calculated distance in yards or meters.</li>
+    </ol>
+    <p><strong>Accuracy matters:</strong> milling relies on knowing the target’s real-world size as precisely as possible.</p>
+</section>
 
-        <h2>Firearm Safety Rules</h2>
-        <p>This app does not replace professional firearm instruction. Users must always follow the universal rules of firearm safety:</p>
-        <ul>
-            <li>Treat every firearm as if it is loaded.</li>
-            <li>Never point a firearm at anything you are not willing to destroy.</li>
-            <li>Keep your finger off the trigger until your sights are on target and you are ready to fire.</li>
-            <li>Be sure of your target, your foreground, and your background.</li>
-            <li>Know how your firearm operates and maintain it properly.</li>
-            <li>Store firearms and ammunition securely when not in use.</li>
-        </ul>
-        <p>Failure to follow these rules can result in serious injury or death. Always obtain proper in-person firearms training from a certified instructor.</p>
+<details>
+<summary>Legal & Compliance</summary>
 
-        <h2>Legal Compliance Notice</h2>
-        <p>Users are responsible for complying with all applicable local, state, and federal laws regarding firearms, ammunition, and ballistic equipment. This application must not be used for any unlawful purpose or in any way that could assist in evading the law.</p>
+<h3>Privacy Policy</h3>
+<p>This application does not collect or transmit personal data. All settings remain on the device.</p>
 
-        <h2>Accuracy Disclaimer</h2>
-        <p>All calculations, ranging estimates, and ballistic information in this app are approximations. Actual real-world performance may vary due to environmental conditions, equipment differences, and human factors. Always confirm data through safe, controlled, real-world procedures.</p>
+<h3>Terms of Service</h3>
+<p>This app is provided for educational and recreational use only. All calculations are approximations.</p>
 
-        <h2>Open Source Licenses</h2>
-        <p>If this application uses open-source libraries, their licenses will be listed here.</p>
+<h3>Firearm Safety</h3>
+<p>This app does not replace professional firearm training. Always follow universal firearm safety rules.</p>
 
-        <h2>Contact Information</h2>
-        <p>For questions, support, or data-related requests, contact the developer at: <a href="mailto:support@mil-calc.com" style="color:#ccc;">support@mil-calc.com</a></p>
-    </section>
+<h3>Legal Compliance</h3>
+<p>Users are responsible for complying with all applicable firearm laws.</p>
 
-    <footer>
-        © 2025 Mil-Calc. All rights reserved. For educational and recreational use only.
-    </footer>
+<h3>Accuracy Disclaimer</h3>
+<p>All results are estimates. Always confirm through safe, real-world procedures.</p>
+
+<h3>Contact</h3>
+<p>support@mil-calc.com</p>
+
+</details>
+
+<footer>
+© 2025 Mil-Calc. Educational & recreational use only.
+</footer>
 
 </body>
 </html>
