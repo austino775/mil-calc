@@ -7,11 +7,14 @@
 
 <style>
 :root {
-    --bg-base: #6F7756;              /* Sage Green (app icon) */
-    --bg-card: rgba(0, 0, 0, 0.20);  /* Soft overlay, not black */
-    --accent: #A8B58A;               /* Muted tactical green */
-    --text-main: #f0f0f0;
-    --text-muted: #d0d0d0;
+    --bg-base: #6F7756;               /* Sage background */
+    --bg-card: rgba(0, 0, 0, 0.18);   /* Soft card overlay */
+    --bg-muted: rgba(0, 0, 0, 0.28);  /* Darker grey for legal + buttons */
+
+    --accent: #A8B58A;                /* Soft sage accent (text only) */
+
+    --text-main: #f2f2f2;
+    --text-muted: #d4d4d4;
 }
 
 body {
@@ -68,11 +71,12 @@ p {
     line-height: 1.6;
 }
 
+/* 🔘 Contact Support Button (Grey) */
 .btn {
     display: inline-block;
     padding: 14px 30px;
-    background: var(--accent);
-    color: #1a1a1a;
+    background: var(--bg-muted);
+    color: var(--text-main);
     text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
@@ -80,7 +84,7 @@ p {
 }
 
 .btn:hover {
-    filter: brightness(0.9);
+    filter: brightness(1.1);
 }
 
 .steps {
@@ -94,10 +98,11 @@ p {
     color: var(--text-muted);
 }
 
+/* 📄 Legal Section (Grey, subdued) */
 details {
     max-width: 900px;
     margin: 40px auto;
-    background: var(--bg-card);
+    background: var(--bg-muted);
     border-radius: 16px;
     padding: 25px;
 }
@@ -106,7 +111,7 @@ summary {
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
-    color: var(--accent);
+    color: var(--text-main);
     margin-bottom: 10px;
 }
 
@@ -117,7 +122,7 @@ details h3 {
 footer {
     margin: 50px 0 20px;
     font-size: 0.85rem;
-    color: #c0c0c0;
+    color: #c6c6c6;
 }
 </style>
 </head>
@@ -135,11 +140,12 @@ footer {
 <section class="card">
     <h2>What Is Mil-Calc?</h2>
     <p>
-        Mil-Calc is a fast, digital distance milling calculator.
+        Mil-Calc is a fast, modern distance milling calculator designed for shooters who want
+        accurate ranging without outdated tools, cluttered charts, or mental math.
     </p>
     <p>
-        It replaces traditional slide rules with a clean, readable interface built for ease of use —
-        whether you're at the range, hunting, or practicing fundamentals. No more slide rules and no more more math while out in the field. 
+        It replaces traditional slide rules with a clean, readable interface built for real-world use —
+        whether you're at the range, hunting, or practicing fundamentals.
     </p>
 </section>
 
@@ -176,7 +182,7 @@ footer {
 <p>This application does not collect or transmit personal data. All settings remain on the device.</p>
 
 <h3>Terms of Service</h3>
-<p>This app is provided for educational and lawful use only. All calculations are approximations.</p>
+<p>This app is provided for educational and recreational use only. All calculations are approximations.</p>
 
 <h3>Firearm Safety</h3>
 <p>This app does not replace professional firearm training. Always follow universal firearm safety rules.</p>
