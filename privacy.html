@@ -1,60 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Privacy Policy | Mil-Calc</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #6F7756;
-      color: #f2f2f2;
-      line-height: 1.6;
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+<meta charset="UTF-8">
+<title>Privacy Policy | Mil-Calc</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+
+<style>
+/* 🌿 Color Palette */
+:root {
+    --bg-base: #2d2f23;              /* Dark military green */
+    --bg-card: rgba(0, 0, 0, 0.2);   /* Card overlay */
+    --accent: #4DFF4D;                /* Neon green */
+    --text-main: #ffffff;             /* Primary text */
+    --text-muted: rgba(255,255,255,0.7); /* Muted text */
+    --link-color: #4DFF4D;            /* Neon links */
+}
+
+/* 🌿 Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-base);
+    color: var(--text-main);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px 25px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+h1, h2 {
+    color: var(--accent);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media(max-width:600px){
+    .container{
+        padding: 30px 15px;
+        margin: 30px 10px;
     }
-    h1, h2 {
-      color: #f2f2f2;
-    }
-    a {
-      color: #A8B58A;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-<h1>Privacy Policy</h1>
-<p><strong>Last updated:</strong> January 2026</p>
+<div class="container">
+    <h1>Privacy Policy</h1>
+    <p><strong>Last updated:</strong> January 2026</p>
 
-<p>Mil-Calc respects your privacy. This Privacy Policy explains how information is handled when you use the Mil-Calc mobile application.</p>
+    <p>Mil-Calc respects your privacy. This Privacy Policy explains how information is handled when you use the Mil-Calc mobile application.</p>
 
-<h2>Information Collection and Use</h2>
-<p>Mil-Calc does <strong>not collect, store, transmit, or share any personal data</strong>. All calculations, preferences, and settings are processed locally on your device and never leave it.</p>
+    <h2>Information Collection and Use</h2>
+    <p>Mil-Calc does <strong>not collect, store, transmit, or share any personal data</strong>. All calculations, preferences, and settings are processed locally on your device and never leave it.</p>
 
-<h2>Third-Party Services</h2>
-<p>Mil-Calc does <strong>not</strong> use third-party analytics, advertising, tracking services, or external SDKs that collect user data.</p>
+    <h2>Third-Party Services</h2>
+    <p>Mil-Calc does <strong>not</strong> use third-party analytics, advertising, tracking services, or external SDKs that collect user data.</p>
 
-<h2>Data Storage</h2>
-<p>No personal or usage data is stored on external servers. All data remains entirely on the user’s device.</p>
+    <h2>Data Storage</h2>
+    <p>No personal or usage data is stored on external servers. All data remains entirely on the user’s device.</p>
 
-<h2>Children’s Privacy</h2>
-<p>Mil-Calc does not collect personal information from any users. The app is not designed to collect data from children or adults.</p>
+    <h2>Children’s Privacy</h2>
+    <p>Mil-Calc does not collect personal information from any users. The app is not designed to collect data from children or adults.</p>
 
-<h2>Changes to This Privacy Policy</h2>
-<p>If Mil-Calc’s data practices change in the future, this Privacy Policy will be updated accordingly.</p>
+    <h2>Changes to This Privacy Policy</h2>
+    <p>If Mil-Calc’s data practices change in the future, this Privacy Policy will be updated accordingly.</p>
 
-<h2>Contact</h2>
-<p>
-Email: <a href="mailto:privacy@mil-calc.com">privacy@mil-calc.com</a><br>
-Website: <a href="https://mil-calc.com">https://mil-calc.com</a>
-</p>
+    <h2>Contact</h2>
+    <p>
+        Email: <a href="mailto:privacy@mil-calc.com">privacy@mil-calc.com</a><br>
+        Website: <a href="https://mil-calc.com">https://mil-calc.com</a>
+    </p>
+</div>
 
 </body>
 </html>
+
