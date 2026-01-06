@@ -6,17 +6,17 @@
 <title>Mil-Calc</title>
 
 <style>
+/* 🌿 Color Palette */
 :root {
-    --bg-base: #6F7756;               /* Sage background */
-    --bg-card: rgba(0, 0, 0, 0.18);   /* Soft card overlay */
-    --bg-muted: rgba(0, 0, 0, 0.28);  /* Darker grey for legal + buttons */
-
-    --accent: #A8B58A;                /* Soft sage accent (text only) */
-
-    --text-main: #f2f2f2;
-    --text-muted: #d4d4d4;
+    --bg-base: #2d2f23;              /* Dark military green */
+    --bg-card: rgba(0, 0, 0, 0.2);   /* Card overlay */
+    --accent: #4DFF4D;                /* Neon green */
+    --text-main: #ffffff;             /* Main text */
+    --text-muted: rgba(255,255,255,0.7); /* Muted text */
+    --btn-bg: rgba(100,100,100,0.7);  /* Button background */
 }
 
+/* 🌿 Global Styles */
 body {
     margin: 0;
     padding: 0;
@@ -35,7 +35,8 @@ section {
     max-width: 900px;
     margin: 30px auto;
     padding: 40px 25px;
-    border-radius: 16px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
 }
 
 .logo {
@@ -47,21 +48,18 @@ section {
 h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    color: var(--accent);
 }
 
 h2 {
     margin-bottom: 15px;
-}
-
-.tagline {
-    font-size: 1.2rem;
-    color: var(--text-muted);
+    color: var(--accent);
 }
 
 .subtitle {
     color: var(--accent);
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 p {
@@ -69,22 +67,6 @@ p {
     margin: 15px auto;
     color: var(--text-muted);
     line-height: 1.6;
-}
-
-/* 🔘 Contact Support Button (Grey) */
-.btn {
-    display: inline-block;
-    padding: 14px 30px;
-    background: var(--bg-muted);
-    color: var(--text-main);
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    margin-top: 30px;
-}
-
-.btn:hover {
-    filter: brightness(1.1);
 }
 
 .steps {
@@ -98,13 +80,33 @@ p {
     color: var(--text-muted);
 }
 
-/* 📄 Legal Section (Grey, subdued) */
+/* 🔘 Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: var(--btn-bg);
+    color: var(--text-main);
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    margin-top: 30px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    transition: filter 0.2s;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+/* 📄 Legal Section */
 details {
     max-width: 900px;
     margin: 40px auto;
-    background: var(--bg-muted);
-    border-radius: 16px;
+    background: var(--bg-card);
+    border-radius: 12px;
     padding: 25px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    color: var(--text-muted);
 }
 
 summary {
@@ -117,26 +119,40 @@ summary {
 
 details h3 {
     margin-top: 20px;
+    color: var(--accent);
+}
+
+details a {
+    color: var(--accent);
+    text-decoration: underline;
 }
 
 footer {
     margin: 50px 0 20px;
     font-size: 0.85rem;
-    color: #c6c6c6;
+    color: var(--text-muted);
+}
+
+/* Responsive adjustments */
+@media(max-width:600px){
+    h1{font-size:2.2rem;}
+    h2{font-size:1.5rem;}
 }
 </style>
 </head>
 
 <body>
 
+<!-- 🌿 Hero Section -->
 <section>
     <img src="logo.png" class="logo" alt="Mil-Calc Logo" />
     <h1>Mil-Calc</h1>
     <p class="subtitle">No more slide rules.</p>
-    <p class="tagline">Distance Milling Calculator for iPhone</p>
+    <p>Distance Milling Calculator for iPhone</p>
     <a class="btn" href="mailto:support@mil-calc.com">Contact Support</a>
 </section>
 
+<!-- 🌿 What Is Mil-Calc? -->
 <section class="card">
     <h2>What Is Mil-Calc?</h2>
     <p>
@@ -149,6 +165,7 @@ footer {
     </p>
 </section>
 
+<!-- 🌿 Why Milling Still Matters -->
 <section class="card">
     <h2>Why Milling Still Matters</h2>
     <p>
@@ -162,6 +179,7 @@ footer {
     </p>
 </section>
 
+<!-- 🌿 How to Use Mil-Calc -->
 <section class="card">
     <h2>How to Use Mil-Calc</h2>
     <ol class="steps">
@@ -175,13 +193,14 @@ footer {
     </p>
 </section>
 
+<!-- 🌿 Legal & Privacy -->
 <details>
 <summary>Legal & Compliance</summary>
 
 <h3>Privacy Policy</h3>
 <p>
 Mil-Calc does not collect, store, transmit, or share any personal data. All calculations and settings remain on the device.  
-<a href="/privacy.html" style="color: var(--accent); text-decoration: underline;">Read the full Privacy Policy</a>
+<a href="/privacy.html">Read the full Privacy Policy</a>
 </p>
 
 <h3>Terms of Service</h3>
@@ -204,6 +223,7 @@ Privacy Questions: <a href="mailto:privacy@mil-calc.com">privacy@mil-calc.com</a
 
 </details>
 
+<!-- 🌿 Footer -->
 <footer>
 © 2025 Mil-Calc. Educational & recreational use only.
 </footer>
