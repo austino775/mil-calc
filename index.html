@@ -6,17 +6,16 @@
 <title>Mil-Calc</title>
 
 <style>
-/* 🌿 Color Palette */
 :root {
     --bg-base: #2d2f23;              /* Dark military green */
     --bg-card: rgba(0, 0, 0, 0.2);   /* Card overlay */
     --accent: #4DFF4D;                /* Neon green */
-    --text-main: #ffffff;             /* Main text */
-    --text-muted: rgba(255,255,255,0.7); /* Muted text */
-    --btn-bg: rgba(100,100,100,0.7);  /* Button background */
+    --text-main: #ffffff;             
+    --text-muted: rgba(255,255,255,0.7); 
+    --btn-bg: rgba(100,100,100,0.7);  
+    --link-color: #4DFF4D;
 }
 
-/* 🌿 Global Styles */
 body {
     margin: 0;
     padding: 0;
@@ -37,6 +36,7 @@ section {
     padding: 40px 25px;
     border-radius: 12px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    text-align: left;
 }
 
 .logo {
@@ -45,42 +45,39 @@ section {
     margin-bottom: 20px;
 }
 
+h1, h2 {
+    color: var(--accent);
+}
+
 h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: var(--accent);
-}
-
-h2 {
-    margin-bottom: 15px;
-    color: var(--accent);
-}
-
-.subtitle {
-    color: var(--accent);
-    font-weight: bold;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-p {
-    max-width: 750px;
-    margin: 15px auto;
-    color: var(--text-muted);
-    line-height: 1.6;
-}
-
-.steps {
-    text-align: left;
-    max-width: 700px;
-    margin: auto;
-}
-
-.steps li {
+h2 {
+    margin-top: 25px;
     margin-bottom: 12px;
-    color: var(--text-muted);
 }
 
-/* 🔘 Buttons */
+p, li {
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+ol li, ul li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 14px 30px;
@@ -98,7 +95,7 @@ p {
     filter: brightness(1.1);
 }
 
-/* 📄 Legal Section */
+/* Details section */
 details {
     max-width: 900px;
     margin: 40px auto;
@@ -122,28 +119,18 @@ details h3 {
     color: var(--accent);
 }
 
-details a {
-    color: var(--accent);
-    text-decoration: underline;
-}
-
-footer {
-    margin: 50px 0 20px;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
-
-/* Responsive adjustments */
+/* Responsive */
 @media(max-width:600px){
-    h1{font-size:2.2rem;}
-    h2{font-size:1.5rem;}
+    .card{
+        padding: 30px 15px;
+        margin: 30px 10px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- 🌿 Hero Section -->
 <section>
     <img src="logo.png" class="logo" alt="Mil-Calc Logo" />
     <h1>Mil-Calc</h1>
@@ -152,81 +139,69 @@ footer {
     <a class="btn" href="mailto:support@mil-calc.com">Contact Support</a>
 </section>
 
-<!-- 🌿 What Is Mil-Calc? -->
 <section class="card">
-    <h2>What Is Mil-Calc?</h2>
-    <p>
-        Mil-Calc is a fast, modern distance milling calculator designed for shooters who want
-        accurate ranging without outdated tools, cluttered charts, or mental math.
-    </p>
-    <p>
-        It replaces traditional slide rules with a clean, readable interface built for real-world use —
-        whether you're at the range, hunting, or practicing fundamentals.
-    </p>
+    <h2>How to Use Mil‑Calc</h2>
+    <p>Mil‑Calc helps you estimate the distance to a target using your scope to measure a target of known size.</p>
+
+    <h3>Step 1: Choose a Known Target Size</h3>
+    <p>Pick a target in which you know the size of.<br><strong>⚠️ Accuracy here is critical.</strong><br>If your target size is off, your distance calculation will also be off. Even a small error can result in a significant distance difference.</p>
+
+    <h3>Step 2: Measure Through Your Scope</h3>
+    <p>Look through your scope and measure how many MILs or MOA the target spans across your scope's reticle.</p>
+    <ul>
+        <li>Confirm your scope's reticle is MOA or MIL</li>
+        <li>Confirm your app's settings reflect MIL or MOA</li>
+        <li>Measure carefully</li>
+        <li>Use decimal precision when possible (e.g. 2.4 MIL, not 2 MIL)</li>
+    </ul>
+    <p>The more precise your measurement, the better your result.</p>
+
+    <h3>Step 3: Enter the Values</h3>
+    <p>Enter:<br>• The known target size (The actual measurement of the target's size)<br>• The measured MIL or MOA value (What you saw through your scope)<br><br>Then tap <strong>Calculate</strong>.<br>The app will display a calculated distance to the target based on your inputs.<br><br>To calculate a second time or another target's distance select 'Mil Another Target'.</p>
+
+    <h3>Using the Reference Section</h3>
+    <p>The Reference section provides common average and standardized sizes to help you when you do not know a target's exact dimensions.</p>
+    <ul>
+        <li>IPSC target measurements</li>
+        <li>Various animal sizes</li>
+        <li>Standardized objects like building materials and traffic signs</li>
+    </ul>
+    <p>For animal references, measurements are typically listed as <strong>Vital Zone Height</strong>. Some small animals, like prairie dogs, use <strong>Standing Height</strong>. To add a reference measurement to your distance calculation, select <strong>“Add Selected Size”</strong>.</p>
+    <p>Please note: These size measurements are <strong>approximations</strong>, but often close enough to be useful.</p>
+
+    <h3>Important Notes</h3>
+    <ul>
+        <li>This app provides <strong>calculated distances based on your inputs</strong></li>
+        <li>Always confirm distance when safety is a concern</li>
+        <li>The better your input, the better your output</li>
+    </ul>
 </section>
 
-<!-- 🌿 Why Milling Still Matters -->
-<section class="card">
-    <h2>Why Milling Still Matters</h2>
-    <p>
-        Milling is a fundamental shooting skill and a reliable backup when electronics or rangefinders fail.
-    </p>
-    <p>
-        It reinforces ballistic understanding — and honestly, it’s kind of fun.
-    </p>
-    <p>
-        Mil-Calc keeps the skill intact while removing friction.
-    </p>
-</section>
-
-<!-- 🌿 How to Use Mil-Calc -->
-<section class="card">
-    <h2>How to Use Mil-Calc</h2>
-    <ol class="steps">
-        <li>Measure the target’s actual size accurately (height or width).</li>
-        <li>Observe the target through your optic and read the MIL or MOA measurement.</li>
-        <li>Enter both values into the app.</li>
-        <li>Instantly receive the calculated distance in yards or meters.</li>
-    </ol>
-    <p>
-        <strong>Accuracy matters:</strong> milling depends on knowing the target’s real-world size as precisely as possible.
-    </p>
-</section>
-
-<!-- 🌿 Legal & Privacy -->
 <details>
 <summary>Legal & Compliance</summary>
 
 <h3>Privacy Policy</h3>
-<p>
-Mil-Calc does not collect, store, transmit, or share any personal data. All calculations and settings remain on the device.  
-<a href="/privacy.html">Read the full Privacy Policy</a>
-</p>
+<p>This application does <strong>not collect, store, transmit, or share any personal data</strong>. No analytics, tracking systems, or third-party data services are used. All settings remain on the user's device and never leave it.  
+<a href="/privacy.html">Read the full Privacy Policy</a></p>
 
 <h3>Terms of Service</h3>
-<p>This app is provided for educational and recreational use only. All calculations are approximations.</p>
+<p>This application is provided for lawful recreational, educational, and sporting use only. All calculations and information are approximations and should not be relied upon as a sole source of truth. Users are solely responsible for ensuring safe, legal, and appropriate use of this app.</p>
+<p>By using this app, the user agrees that the developer is not responsible for any damages, injuries, or legal consequences arising from misuse, misinterpretation of data, or unsafe behavior.</p>
 
-<h3>Firearm Safety</h3>
-<p>This app does not replace professional firearm training. Always follow universal firearm safety rules.</p>
+<h3>Firearm Safety Rules</h3>
+<p>This app does not replace professional firearm instruction. Users must always follow the universal rules of firearm safety:</p>
+<ul>
+    <li>Treat every firearm as if it is loaded.</li>
+    <li>Never point a firearm at anything you are not willing to destroy.</li>
+    <li>Keep your finger off the trigger until your sights are on target and you are ready to fire.</li>
+    <li>Be sure of your target, your foreground, and your background.</li>
+    <li>Know how your firearm operates and maintain it properly.</li>
+    <li>Store firearms and ammunition securely when not in use.</li>
+</ul>
+<p>Failure to follow these rules can result in serious injury or death. Always obtain proper in-person firearms training from a certified instructor.</p>
 
-<h3>Legal Compliance</h3>
-<p>Users are responsible for complying with all applicable firearm laws.</p>
+<h3>Legal Compliance Notice</h3>
+<p>Users are responsible for complying with all applicable local, state, and federal laws regarding firearms, ammunition, and ballistic equipment. This application must not be used for any unlawful purpose or to evade the law.</p>
 
-<h3>Accuracy Disclaimer</h3>
-<p>All results are estimates. Always confirm through safe, real-world procedures.</p>
+<h3>Accuracy Disc
 
-<h3>Contact</h3>
-<p>
-General Support: <a href="mailto:support@mil-calc.com">support@mil-calc.com</a><br>
-Privacy Questions: <a href="mailto:privacy@mil-calc.com">privacy@mil-calc.com</a>
-</p>
-
-</details>
-
-<!-- 🌿 Footer -->
-<footer>
-© 2025 Mil-Calc. Educational & recreational use only.
-</footer>
-
-</body>
-</html>
